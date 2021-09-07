@@ -14,3 +14,17 @@ class User(db.Model):
     auth_key = Column(String(100), nullable=False)
     nick_name = Column(String(20))
     photo = Column(String(100))
+
+
+class Role(db.Model):
+    id = Column(Integer,
+                primary_key=True,
+                autoincrement=True
+                )
+    name = Column(String(20),
+                  unique=True,
+                  nullable=False
+                  )
+
+class Qx(db.Model):
+    pass
